@@ -89,7 +89,8 @@ dependencies {
         exclude(group: 'log4j', module: 'log4j')
     }
     implementation libs.auth0
-    implementation libs.pingpp
+    // implementation libs.pingpp 这个被删了 手动下载在下面
+    implementation files('../libs/pingpp-java-2.3.14.jar')
     implementation libs.alipay.easy
     implementation libs.wechatpay
     implementation libs.stripe
