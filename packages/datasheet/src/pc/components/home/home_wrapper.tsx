@@ -84,24 +84,26 @@ export const HomeWrapper: React.FC<React.PropsWithChildren<IHomeWrapper>> = ({ c
       <div className={styles.header}>
         <div className={styles.brand}>
           {getEnvVariables().IS_AITABLE ? (
+            // 这个控制登录前前面闪动的 logo + 文字，但好像不管用
             <div>
-              <img src={integrateCdnHost(logo)} width={32} alt="logo" />
+              <img src={integrateCdnHost(logo)} width={20} alt="logo" />
               <img src={integrateCdnHost(text)} width={96} alt="text" />
             </div>
           ) : (
-            <img src={integrateCdnHost(logo)} width={132} alt="logo" />
+            // 这个控制数字活起来左边 logo
+            <img src={integrateCdnHost(logo)} width={22} alt="logo" />
           )}
           <Typography variant={'h7'} color={colors.textCommonSecondary}>
             {getEnvVariables().IS_AITABLE
               ? 'Custom ChatGPT with Table in 1-Click'
-              : getEnvVariables().LOGIN_MOTTO || "let's make the world more productive!"}
+              : getEnvVariables().LOGIN_MOTTO || '让你的数据活起来'}
           </Typography>
         </div>
-        {socialIconsContent}
+        {/* {socialIconsContent} */}
       </div>
       <div className={styles.main}>{children}</div>
       <div className={styles.footer}>
-        <NavBar action={action} />
+        {/* <NavBar action={action} /> */}
       </div>
     </div>
   );
