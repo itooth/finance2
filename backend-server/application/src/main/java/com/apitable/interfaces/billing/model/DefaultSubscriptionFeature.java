@@ -62,37 +62,37 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public Seat getSeat() {
-        return new Seat(2L);
+        return new Seat(50L);
     }
 
     @Override
     public CapacitySize getCapacitySize() {
-        return new CapacitySize(1024 * 1024 * 1024L);
+        return new CapacitySize(1024 * 1024 * 10240L);
     }
 
     @Override
     public FileNodeNums getFileNodeNums() {
-        return new FileNodeNums(5L);
+        return new FileNodeNums(200L);
     }
 
     @Override
     public RowsPerSheet getRowsPerSheet() {
-        return new RowsPerSheet(100L);
+        return new RowsPerSheet(10000L);
     }
 
     @Override
     public ArchivedRowsPerSheet getArchivedRowsPerSheet() {
-        return new ArchivedRowsPerSheet(250L);
+        return new ArchivedRowsPerSheet(10000L);
     }
 
     @Override
     public TotalRows getTotalRows() {
-        return new TotalRows(250L);
+        return new TotalRows(10000L);
     }
 
     @Override
     public MirrorNums getMirrorNums() {
-        return new MirrorNums(-1L);
+        return new MirrorNums(200L);
     }
 
     @Override
@@ -102,23 +102,23 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public ApiCallNumsPerMonth getApiCallNumsPerMonth() {
-        return new ApiCallNumsPerMonth(-1L);
+        return new ApiCallNumsPerMonth(2000L);
     }
 
 
     @Override
     public WidgetNums getWidgetNums() {
-        return new WidgetNums(-1L);
+        return new WidgetNums(500L);
     }
 
     @Override
     public AutomationRunNumsPerMonth getAutomationRunNumsPerMonth() {
-        return new AutomationRunNumsPerMonth(-1L);
+        return new AutomationRunNumsPerMonth(2000L);
     }
 
     @Override
     public FormNums getFormNums() {
-        return new FormNums(-1L);
+        return new FormNums(2000L);
     }
 
     @Override

@@ -21,7 +21,7 @@ target "backend-server" {
     SEMVER_FULL = SEMVER_FULL
   }
   platforms = ["linux/amd64", "linux/arm64"]
-  tags = ["${IMAGE_REGISTRY}/apitable/backend-server:latest", "${IMAGE_REGISTRY}/apitable/backend-server:${IMAGE_TAG}"]
+  tags = ["kim0809/myapitable:backend-server-latest"]
 }
 
 target "room-server" {
