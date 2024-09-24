@@ -4,3 +4,4 @@ ARG SEMVER_FULL
 ENV SEMVER_FULL=${SEMVER_FULL}
 
 COPY conf.d/ /etc/nginx/conf.d/
+COPY ssl/ /etc/nginx/ssl/
