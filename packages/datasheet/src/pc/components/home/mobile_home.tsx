@@ -94,7 +94,11 @@ export const MobileHome: React.FC<React.PropsWithChildren<unknown>> = () => {
   return (
     <div className={styles.mobileHome}>
       <div className={styles.header}>
-        <img src={integrateCdnHost(logo)} alt="logo" />
+        <img 
+          src={integrateCdnHost(logo)} 
+          alt="logo" 
+          style={{ width: '80px', height: 'auto' }}
+        />
       </div>
       {inviteLinkInfo || inviteEmailInfo ? (
         <div className={styles.invite}>
@@ -108,7 +112,7 @@ export const MobileHome: React.FC<React.PropsWithChildren<unknown>> = () => {
       )}
       <div className={styles.content}>{homeModal(action)}</div>
       <Space size={41} vertical>
-        <GithubButton />
+        {/* <GithubButton /> */}
         <NavBar action={action} />
       </Space>
     </div>

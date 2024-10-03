@@ -30,15 +30,15 @@ export const NavBar: React.FC<React.PropsWithChildren<INavBar>> = (props) => {
   const { gap = 32, action } = props;
   const linkList = compact([
     {
-      href: 'https://help.apitable.com',
+      href: 'https://beian.miit.gov.cn/',
       target: '_blank',
-      text: 'Help Center',
+      text: '粤ICP备2022133468号',
     },
-    {
-      href: 'https://apitable.com',
-      target: '_blank',
-      text: 'About',
-    },
+    // {
+    //   href: 'https://apitable.com',
+    //   target: '_blank',
+    //   text: 'About',
+    // },
     action === ActionType.BindAppSumo && {
       href: 'https://aitable.ai/privacy-policy',
       target: '_blank',
