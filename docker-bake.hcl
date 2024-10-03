@@ -20,7 +20,7 @@ target "backend-server" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  platforms = ["linux/amd64", "linux/arm64"]
+  platforms = ["linux/amd64"]
   tags = ["kim0809/myapitable:backend-server-latest"]
 }
 
@@ -41,7 +41,7 @@ target "web-server" {
     SEMVER_FULL = SEMVER_FULL
   }
   platforms = ["linux/amd64"]
-  tags = ["${IMAGE_REGISTRY}/apitable/web-server:latest", "${IMAGE_REGISTRY}/apitable/web-server:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:backend-server-latest", "${IMAGE_REGISTRY}/apitable/web-server:${IMAGE_TAG}"]
 }
 
 # https://github.com/apitable/apitable/issues/1379

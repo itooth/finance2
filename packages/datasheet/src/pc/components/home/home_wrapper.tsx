@@ -103,7 +103,7 @@ export const HomeWrapper: React.FC<React.PropsWithChildren<IHomeWrapper>> = ({ c
       </div>
       <div className={styles.main}>{children}</div>
       <div className={styles.footer}>
-        {/* <NavBar action={action} /> */}
+        <NavBar action={action} />
       </div>
     </div>
   );
