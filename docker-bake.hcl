@@ -41,7 +41,7 @@ target "web-server" {
     SEMVER_FULL = SEMVER_FULL
   }
   platforms = ["linux/amd64"]
-  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:web-server-latest", "${IMAGE_REGISTRY}/apitable/web-server:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:web-server-latest"]
 }
 
 # https://github.com/apitable/apitable/issues/1379
