@@ -96,8 +96,8 @@ function getFileFormat(options?: IImageThumbOption) {
 }
 
 function getImageThumbSrcForQiniu(src: string, options: IImageThumbOption) {
-  if (!/^http/.test(src)) {
-    src[0] !== '/' && (src = '/' + src);
+  if (!/^http?:\/\//.test(src)) {
+    src = integrateCdnHost(src);
   }
 
   if(src.includes('?')){
@@ -209,7 +209,7 @@ export const integrateCdnHost = (
     return pathName;
   }
   // TODO: delete this. Compatible with old version data
-  if (pathName.startsWith('http')) {
+  if (/^http?:\/\//.test(pathName)) {
     return pathName;
   }
   const host: string = getHostOfAttachment('QNY1', pathName);
