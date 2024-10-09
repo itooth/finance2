@@ -75,6 +75,7 @@ public class ResourceInterceptor extends AbstractServletSupport implements Handl
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object handler) {
         String requestPath = resolveServletPath(request);
+        log.info("Checking resource for path: {}", requestPath);
         ResourceDefinition resourceDef =
             apiResourceFactory.getResourceByUrl(requestPath, request.getMethod());
         if (resourceDef == null) {

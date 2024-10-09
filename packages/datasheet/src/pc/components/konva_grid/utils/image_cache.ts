@@ -38,7 +38,7 @@ export const imageCache = (() => {
         // Check if src is an absolute URL
         const isAbsoluteUrl = /^https?:\/\//i.test(src);
         const finalUrl = isAbsoluteUrl ? src : location.origin + (src.startsWith('/') ? '' : '/') + src;
-        console.log('Final URL:', finalUrl); // Log the final URL
+        // console.log('Final URL:', finalUrl); // Log the final URL
         img.src = finalUrl;
         img.referrerPolicy = 'no-referrer';
 

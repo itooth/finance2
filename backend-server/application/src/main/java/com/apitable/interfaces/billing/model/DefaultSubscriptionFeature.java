@@ -133,7 +133,7 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public FieldPermissionNums getFieldPermissionNums() {
-        return new FieldPermissionNums(-1L);
+        return new FieldPermissionNums(10L);
     }
 
     @Override

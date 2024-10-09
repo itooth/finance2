@@ -105,7 +105,7 @@ export const contextItemMap = new Map<ContextItemKey, any>([
       shortcutKey: getShortcutKeyString(ShortcutActionName.Permission),
       id: WORKBENCH_SIDE_ID.OPERATE_ITEM_SET_PERMISSIONS,
       onClick,
-      hidden: !getEnvVariables().FILE_PERMISSION_VISIBLE,
+      hidden: getEnvVariables().FILE_PERMISSION_VISIBLE,
     }),
   ],
   [
