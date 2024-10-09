@@ -35,7 +35,11 @@ export const imageCache = (() => {
     imgPromises.push(
       new Promise((resolve, reject) => {
         const img = new Image();
-        img.src = location.origin + (src.startsWith('/') ? '' : '/') + src;
+        // Check if src is an absolute URL
+        const isAbsoluteUrl = /^https?:\/\//i.test(src);
+        const finalUrl = isAbsoluteUrl ? src : location.origin + (src.startsWith('/') ? '' : '/') + src;
+        console.log('Final URL:', finalUrl); // Log the final URL
+        img.src = finalUrl;
         img.referrerPolicy = 'no-referrer';
 
         if (!option?.crossOrigin && getEnvVariables().IS_CANVAS_IMAGE_CROSS_ORIGIN) {
