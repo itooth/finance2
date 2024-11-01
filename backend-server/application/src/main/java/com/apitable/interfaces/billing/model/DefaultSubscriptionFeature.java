@@ -87,7 +87,7 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public TotalRows getTotalRows() {
-        return new TotalRows(10000L);
+        return new TotalRows(100000L);
     }
 
     @Override

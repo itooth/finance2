@@ -71,8 +71,8 @@ target "openresty" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  platforms = ["linux/amd64", "linux/arm64"]
-  tags = ["${IMAGE_REGISTRY}/apitable/openresty:latest", "${IMAGE_REGISTRY}/apitable/openresty:${IMAGE_TAG}"]
+  platforms = ["linux/amd64"]
+  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:openresty:latest"]
 }
 
 target "all-in-one" {
