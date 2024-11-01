@@ -72,7 +72,7 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public FileNodeNums getFileNodeNums() {
-        return new FileNodeNums(200L);
+        return new FileNodeNums(10000L);
     }
 
     @Override
@@ -87,12 +87,12 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public TotalRows getTotalRows() {
-        return new TotalRows(100000L);
+        return new TotalRows(800000L);
     }
 
     @Override
     public MirrorNums getMirrorNums() {
-        return new MirrorNums(200L);
+        return new MirrorNums(10000L);
     }
 
     @Override
