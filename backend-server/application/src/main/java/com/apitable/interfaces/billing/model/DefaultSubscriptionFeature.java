@@ -77,7 +77,7 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public RowsPerSheet getRowsPerSheet() {
-        return new RowsPerSheet(10000L);
+        return new RowsPerSheet(50000L);
     }
 
     @Override
@@ -108,7 +108,7 @@ public class DefaultSubscriptionFeature implements SubscriptionFeature {
 
     @Override
     public WidgetNums getWidgetNums() {
-        return new WidgetNums(500L);
+        return new WidgetNums(2500L);
     }
 
     @Override

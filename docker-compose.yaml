@@ -100,6 +100,8 @@ services:
       - ${NGINX_HTTPS_PORT:-443}:443
     environment:
       - TZ=${TIMEZONE}
+    volumes:
+      - ./gateway/ssl:/etc/nginx/ssl
     networks:
       - apitable
     depends_on:
