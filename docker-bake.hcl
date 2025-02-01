@@ -72,7 +72,7 @@ target "openresty" {
     SEMVER_FULL = SEMVER_FULL
   }
   platforms = ["linux/amd64"]
-  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:openresty:latest"]
+  tags = ["${IMAGE_REGISTRY}/kim0809/myapitable:openresty-latest"]
 }
 
 target "all-in-one" {
